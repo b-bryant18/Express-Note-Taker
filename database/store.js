@@ -1,50 +1,56 @@
 //function for reading notes 
 const fs = require('fs');
-const db = require('db.json');
+const util = require('util');
+//const db = require('db.json');
 
-//Make a class constructor function to store notes with getNotes() and addNotes() inside of it
-class Storage {
-    //put variables in the cconstructor
+const readFileAsync = util.promisify(fs.readFile)
+const writeFileAsync = util.promisify(fs.writeFile)
+
+class Store {
+    //put variables in the constructor
     constructor() {
+        this.lastId = 0;
     }
-    getNotes() {
-        fs.readFile('./db.json', (err, data) => {
-            if (err) throw err;
-            let getNotes = JSOn.parse(data);
-            console.log(db);
-        });
-//should this variable be data or notInfo from apiRoutes?
+    read(){
+return readFileAsync("/db.json", "utf8");
+    };
+    write(note){
+return writeFileAsync("/db.json", JSON.stringify(note));
+    };
+    getNotes(){};
+    addNotes(note){};
+    deleteNote(id){};
+};
+
+module.exports = new Store();
 
 
-        console.log('getNotes is reading db.json');
-        //return all saved notes as json
-    }
+//     getNotes() {
+//         fs.readFile('./db.json', (err, data) => {
+//             if (err) throw err;
+//             let getNotes = JSOn.parse(data);
+//             console.log(db);
+//         });
 
-    postNotes(){
+// //should this variable be data or notInfo from apiRoutes?
 
-    } 
+//         console.log('getNotes is reading db.json');
+//         //return all saved notes as json
+//     }
 
-    storeNotes() {
-    }
+//     postNotes(){
+
+//     } 
+
+//     storeNotes() {
+//     }
     
-    // fs.readFileSync("db.json", JSON.parse()){
-    // }
-    addNotes() {
-        fs.writeFileSync("db.json", JSON.stringify(notes));
-    }
-}
-//addNotes()
+//     // fs.readFileSync("db.json", JSON.parse()){
+//     // }
+//     addNotes() {
+//         fs.writeFileSync("db.json", JSON.stringify(notes));
+//     }
+// }
+// //addNotes()
 
-
-
-module.exports = {
-    //name of class constructor function  
-}
-
-
-
-
-module.exports = {
-    //name of class constructor function  
-}
 
