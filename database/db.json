@@ -1,12 +1,10 @@
-//Store and retrieve notes using the fs module.
-//Do I need to make a notes array here? So that when a new note is saved
-//on the req.body it gets added to this file(per the directions)
-//Insert notes into this array
 [
-    {
-
+    {  
+        "id": 1,
+        "note": "test"
     },
     {
-
-    },
+        "id": 2,
+        "note": "test 2"
+    }
 ]
