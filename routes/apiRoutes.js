@@ -10,6 +10,8 @@ router.get("/notes", function (req, res) {
         .catch(err => res.status(500).json(err))
 
 },
+//does this bracket need to encompass router.post and router.delete?
+
     router.post("/notes", function (req, res) {
         store
             .addNotes(req.body)
@@ -23,3 +25,5 @@ router.get("/notes", function (req, res) {
             .catch(err => res.status(500).json(err))
     })
 
+    //Do I need to export router?
+module.exports = function(router);
