@@ -14,10 +14,6 @@ npm install mysql
 
 ![Home page](./Images/Home-page.png)
 ![Note page](./Images/Note-page.png)
-=======
-![Home page](Express-Homework/Images/Home-page.png)
-![Note page](Express-Homework/Images/Note-page.png)
-
 
 ## Usage
 
