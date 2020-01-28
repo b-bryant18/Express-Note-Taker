@@ -11,8 +11,8 @@ npm install,   require express
 npm init -y,   require path
 npm install mysql
 ```
-![Home page](./Images/home-page.png)
-![Note page](./Images/note-page.png)
+![Home page](./Images/Home-page.png)
+![Note page](./Images/Note-page.png)
 
 ## Usage
 
