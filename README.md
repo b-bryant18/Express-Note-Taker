@@ -4,15 +4,15 @@ This application is used to write, save, and delete notes to an Express js serve
 
 ## Installation
 
-Install the following packages
+Install the following packages and required methods.
 
 ```bash
-npm install, require express
-npm init -y, require path
-npm install mysql,
+npm install,   require express
+npm init -y,   require path
+npm install mysql
 ```
-![Home page](./images/home-page.png)
-![Note page](.images/note-page.png)
+![Home page](images/home-page.png)
+![Note page](images/note-page.png)
 
 ## Usage
 
