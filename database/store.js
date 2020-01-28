@@ -12,7 +12,8 @@ const writeFileAsync = util.promisify(fs.writeFile)
 
 class Store {
     //put variables in the constructor
-    // Looks through all notes and finds highest id. Then new note will have the next higher id. (even when server restarts)
+    // Loops through the notes array and finds highest id.
+    // The new note's id will continue increasing from the highest id even when the server restarts.
     constructor() {
         this.lastId = 0;
         this.getNotes().then((notes) => {
@@ -30,13 +31,13 @@ class Store {
         return writeFileAsync(path.join(__dirname, "db.json"), JSON.stringify(note));
     };
     getNotes() {
-        //this.read().then(dbObject => console.log(dbObject));
+        //Gets notes from the db.json
         return this.read().then(dbString => JSON.parse(dbString));
     };
     addNotes(note) {
-        // write these notes into the file
+        // writes notes into the array
         const newNote = new Note(++this.lastId, note.text, note.title);
-        // get your notes
+        // get notes function again
         return this.getNotes().then((notes) => {
             // update your notes
             notes.push(newNote)
