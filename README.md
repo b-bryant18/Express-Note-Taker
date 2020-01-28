@@ -1,5 +1,3 @@
-# Express-Homework
-
 # Note Taker Application
 
 This application is used to write, save, and delete notes to a server.
@@ -13,6 +11,8 @@ npm install, require express
 npm init -y, require path
 npm install mysql,
 ```
+![Home page](./images/home-page.png)
+![Note page](.images/note-page.png)
 
 ## Usage
 
@@ -27,3 +27,4 @@ Click the write icon to create a new note.
 
 ## Contributing
 Special thanks to Crystal and Anthony Ly for their help. 
+
