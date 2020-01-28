@@ -1,6 +1,6 @@
 # Note Taker Application
 
-This application is used to write, save, and delete notes to a server.
+This application is used to write, save, and delete notes to an Express js server.
 
 ## Installation
 
@@ -17,7 +17,7 @@ npm install mysql,
 ## Usage
 
 ```python
-Click Get Started button on the home page. 
+Click the "Get Started" button on the home page. 
 Enter a title for your note.
 Enter text content for your note.
 Click the save icon to add it to your list of saved notes (which will appear on the left side of the screen).
