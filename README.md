@@ -17,10 +17,10 @@ npm install mysql,
 ## Usage
 
 ```python
-Click get started
-Enter a title for you note.
-Enter text for you note.
-Click the save icon to add it to your list of saved notes.
+Click Get Started button on the home page. 
+Enter a title for your note.
+Enter text content for your note.
+Click the save icon to add it to your list of saved notes (which will appear on the left side of the screen).
 Click the delete icon to remove your desired note. 
 Click the write icon to create a new note.
 ```
