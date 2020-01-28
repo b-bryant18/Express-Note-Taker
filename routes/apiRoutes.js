@@ -4,26 +4,25 @@ const router = require('express').Router();
 
 //Routes
 router.get("/notes", function (req, res) {
-    store
+    dbfile
         .getNotes()
         .then(notes => res.json(notes))
         .catch(err => res.status(500).json(err))
 
-},
+})
 //does this bracket need to encompass router.post and router.delete?
 
-    router.post("/notes", function (req, res) {
-        store
-            .addNotes(req.body)
-            .then((note) => res.json(note))
-            .catch(err => res.status(500).json(err))
-    }),
+router.post("/notes", function (req, res) {
+    dbfile
+        .addNotes(req.body)
+        .then((note) => res.json(note))
+        .catch(err => res.status(500).json(err))
+})
 
-    router.delete("/notes/:id", function (req, res) {
-        store.deleteNote(req.params.id)
-            .then(() => res.json({ ok: true }))
-            .catch(err => res.status(500).json(err))
-    })
+router.delete("/notes/:id", function (req, res) {
+    dbfile.deleteNote(req.params.id)
+        .then(() => res.json({ ok: true }))
+        .catch(err => res.status(500).json(err))
+})
 
-    //Do I need to export router?
-module.exports = function(router);
+module.exports = router;
